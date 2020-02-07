@@ -1,0 +1,237 @@
+header
+  overflow: hidden
+
+  max-width: 100vw
+  max-height: 100vh
+
+nav
+  position: absolute
+  z-index: 1
+  top: 47px
+  left: 32px
+
+  button
+    transition: .3s all ease
+
+    color: #fff
+    border: none
+    background: none
+    text-shadow: 0 2px 12px 0 rgba(#fff, .2)
+
+    font-family: $font-header
+    font-size: 20px
+
+    &:hover
+      cursor: pointer
+
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // span.menu-text
+    // span.menu-icon
+    //   span.menu-icon__dash
+    //   span.menu-icon__dash
+    //   span.menu-icon__dash
+
+img.header-face
+  position: absolute
+
+  width: 669px
+
+  transition: .5s
+
+img.header-words
+  position: absolute
+
+  opacity: 0.4
+
+.shadow-eyes
+  position: absolute
+  top: 0
+  left: -20px
+
+  transition: .4s all ease
+
+  opacity: 0
+
+img.word-mark
+  position: absolute
+  top: 47px
+  right: 32px
+
+.header-borders p
+  position: absolute
+
+  opacity: .2
+
+  &:nth-child(2)
+    top: 50%
+    right: -200px
+
+    transform: rotate(90deg) translateY(-50%)
+
+  &:nth-child(3)
+    right: 350px
+    bottom: 40px
+
+  &:nth-child(1)
+    top: 59px
+    right: 120px
+
+.header-buttons
+  position: absolute
+  right: 30px
+  bottom: 30px
+
+  display: flex
+
+  .header-button
+    margin-left: 30px
+
+    text-align: right
+
+    font-weight: 500
+
+    span.header-button--top
+      display: block
+
+      margin-bottom: -7px
+
+      opacity: .7
+
+    span.header-button--bottom
+      display: block
+
+  .header-button:nth-child(1)
+    margin-left: 0
+
+    opacity: .5
+
+  .header-button:nth-child(2)
+    opacity: .5
+
+.menu-items
+  position: absolute
+  z-index: 1
+  top: 0
+  top: 50%
+
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  width: 50vw
+  margin-left: 42%
+  padding-top: 50px
+
+  transform: translateY(-50%)
+
+  .menu-item
+    width: 45%
+    margin-bottom: 60px
+
+    cursor: pointer
+    transition: .3s all ease
+
+    opacity: 0
+    // opacity: .5
+
+    // &:first-child
+    //   opacity: 1
+
+    // &:hover
+    //   opacity: 1
+
+  h3
+    font-size: 3rem
+
+  .menu-body
+    max-width: 250px
+
+    opacity: .7
+
+    font-style: italic
+
+.header-text
+  position: relative
+  z-index: 1
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  height: 100vh
+  margin-left: 35%
+  padding-top: 50px
+
+  p
+    max-width: 380px
+    margin-top: 10px
+    margin-left: 100px
+
+    opacity: .7
+
+    line-height: 2
+
+  h1 span
+    display: block
+
+  h1 span:nth-child(2)
+    margin: 26px 0
+    margin-left: 40px
+
+  h1 span:nth-child(3)
+    margin-left: 80px
+
+p a
+  color: #fff
+
+  font-weight: 600
+  font-style: italic
+
+.menu-active
+  .shadow-eyes
+    opacity: 1
+
+  img.header-face
+    filter: blur(20px)
+
+  img.header-words
+    opacity: 1
+
+canvas
+  position: absolute
+  top: 0
+  left: 0
+
+  display: block
+
+.scene-nav
+  position: fixed
+  z-index: 10
+  top: 50%
+  right: 0
+
+  padding: 1.5em
+
+  transform: translateY(-50%)
+
+  color: var(--color-nav)
+  border: 0
+  background: none
+
+  font-size: 1.15em
+
+  &:focus
+    outline: none
+
+  &--prev
+    left: 0
+
+.slide-wrapper
+  display: none
+
+.icon--arrow-nav-next
+  transform: rotate(-180deg)

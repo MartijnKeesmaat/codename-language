@@ -1,0 +1,41 @@
+// Real stuff happens here  
+$cursor-color: #fff
+$cursor-size: 12px
+$cursor-size--expanded: 60px
+
+*
+  box-sizing: border-box
+
+  cursor: none !important
+
+.cursor
+  position: absolute
+  z-index: 100
+
+  width: $cursor-size
+  height: $cursor-size
+
+  transition: width .22s, height .22s
+  transform: scale(1) translateZ(0px)
+  pointer-events: none
+
+  border-radius: 100%
+  background: rgba($cursor-color, .4)
+
+  &--link-hover
+    width: $cursor-size--expanded
+    height: $cursor-size--expanded
+
+  &--out-window
+    display: none
+
+  &--click
+    animation: pulse .5s ease
+
+@keyframes pulse
+  0%
+    box-shadow: 0 0 0 0 rgba($cursor-color, 0.4)
+  70%
+    box-shadow: 0 0 0 40px rgba($cursor-color, 0)
+  100%
+    box-shadow: 0 0 0 0 rgba($cursor-color, 0)

@@ -357,6 +357,7 @@ nav button:focus {
   cursor: pointer;
   transition: 0.3s all ease;
   opacity: 0;
+  color: #fff;
 }
 .menu-items .menu-item:hover {
   opacity: 1 !important;
@@ -378,6 +379,45 @@ nav button:focus {
 }
 .menu-active img.header-words {
   opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+.cursor {
+  position: absolute;
+  z-index: 100;
+  width: 12px;
+  height: 12px;
+  transition: width 0.22s, height 0.22s;
+  transform: scale(1) translateZ(0px);
+  pointer-events: none;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.4);
+}
+.cursor--link-hover {
+  width: 60px;
+  height: 60px;
+}
+.cursor--out-window {
+  display: none;
+}
+.cursor--click {
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

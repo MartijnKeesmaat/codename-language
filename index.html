@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sans Language</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loader__icon">
+        <div class="loader__icon__inner">
+          <img class="loader__l" src="img/loading-l.svg" alt="" />
+          <img class="loader__circle" src="img/loading-circle.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav>
+        <button>
+          <img class="menu-text" src="img/menu.svg" /><span class="menu-icon"
+            ><span class="menu-icon__dash"></span>
+            <span class="menu-icon__dash"></span>
+            <span class="menu-icon__dash"></span
+          ></span>
+        </button>
+      </nav>
+
+      <div class="content header-face">
+        <div class="slide-wrapper">
+          <div class="slide-item">
+            <img src="img/header-face.png" class="slide-item__image" />
+          </div>
+        </div>
+      </div>
+      <!-- <img class="header-face" src="img/header-face.png" alt="" /> -->
+      <img class="header-words" src="img/header-words.png" alt="" />
+      <img class="word-mark" src="img/word-mark.svg" alt="" />
+      <img class="shadow-eyes" src="img/shadow-eyes.png" />
+
+      <div class="header-borders">
+        <p>turn off the monitor and see in your head which pieces to move. which pieces to move.</p>
+        <p>You could turn off the monitor and see in your head which pieces to move through</p>
+        <p>turn off the monitor and see in your head which pieces</p>
+      </div>
+      <div class="header-buttons">
+        <div class="header-button"><span class="header-button--top">And then</span><span class="header-button--bottom">Eudaemonia</span></div>
+        <div class="header-button"><span class="header-button--top">Next is</span><span class="header-button--bottom">The Minutiae</span></div>
+        <div class="header-button"><span class="header-button--top">You are on</span><span class="header-button--bottom">Language</span></div>
+      </div>
+      <div class="header-text">
+        <h1>
+          <div>
+            <span>
+              Sans language
+            </span>
+          </div>
+          <div>
+            <span>
+              there is
+            </span>
+          </div>
+          <div>
+            <span>
+              no thought
+            </span>
+          </div>
+        </h1>
+        <p>
+          <span>
+            You could turn off the monitor and see in your head which pieces to move. Like a master chess player. You just keep going and this blank page which just a
+            moment ago was a rough boulder — <a href="#">read more</a>
+          </span>
+        </p>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item menu-item--active">
+          <p class="sub">Agency: bunker</p>
+          <h3>Our services</h3>
+          <p class="menu-body">You could turn off the monitor and see in your head which pieces to move. Like a master chess player.</p>
+        </div>
+        <div class="menu-item menu-item--inactive">
+          <p class="sub">Agency: bunker</p>
+          <h3>About us</h3>
+          <p class="menu-body">You could turn off the monitor and see in your head which pieces to move. Like a master chess player.</p>
+        </div>
+        <div class="menu-item menu-item--inactive">
+          <p class="sub">Agency: bunker</p>
+          <h3>Our clients</h3>
+          <p class="menu-body">You could turn off the monitor and see in your head which pieces to move. Like a master chess player.</p>
+        </div>
+        <div class="menu-item menu-item--inactive">
+          <p class="sub">Agency: bunker</p>
+          <h3>Contact us</h3>
+          <p class="menu-body">You could turn off the monitor and see in your head which pieces to move. Like a master chess player.</p>
+        </div>
+      </div>
+      <div class="bg-gradient"></div>
+    </header>
+
+    <script src="js/gsap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/pixi.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/main2.js"></script>
+    <!-- <script src="js/imagesloaded.pkgd.min.js"></script> -->
+    <script>
+      // imagesLoaded(document.body, () => document.body.classList.remove('loading'));
+
+      var spriteImages = document.querySelectorAll('.slide-item__image');
+      var spriteImagesSrc = [];
+      var texts = [];
+
+      for (var i = 0; i < spriteImages.length; i++) {
+        var img = spriteImages[i];
+
+        // Set the texts you want to display to each slide
+        // in a sibling element of your image and edit accordingly
+        if (img.nextElementSibling) {
+          texts.push(img.nextElementSibling.innerHTML);
+        } else {
+          texts.push('');
+        }
+
+        spriteImagesSrc.push(img.getAttribute('src'));
+      }
+
+      var initCanvasSlideshow = new CanvasSlideshow({
+        sprites: spriteImagesSrc,
+        displacementImage: 'img/dmaps/512x512/clouds.jpg',
+        autoPlay: true,
+        autoPlaySpeed: [1, 0.5],
+        displaceScale: [1000, 500],
+        displaceAutoFit: true,
+        displacementCenter: true,
+        interactive: true,
+        interactionEvent: 'click' // 'click', 'hover', 'both'
+      });
+    </script>
+  </body>
+</html>

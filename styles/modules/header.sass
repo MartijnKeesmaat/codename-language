@@ -1,4 +1,6 @@
 header
+  position: relative
+
   overflow: hidden
 
   max-width: 100vw
@@ -28,12 +30,6 @@ nav
 
     &:focus
       outline: none
-
-    // span.menu-text
-    // span.menu-icon
-    //   span.menu-icon__dash
-    //   span.menu-icon__dash
-    //   span.menu-icon__dash
 
 img.header-face
   position: absolute
@@ -76,9 +72,13 @@ img.word-mark
     right: 350px
     bottom: 40px
 
+    transform: translateX(30px)
+
   &:nth-child(1)
     top: 59px
     right: 120px
+
+    transform: translateX(-30px)
 
 .header-buttons
   position: absolute
@@ -119,6 +119,7 @@ img.word-mark
   top: 50%
 
   display: flex
+  visibility: hidden
   flex-wrap: wrap
   justify-content: center
 
@@ -136,13 +137,6 @@ img.word-mark
     transition: .3s all ease
 
     opacity: 0
-    // opacity: .5
-
-    // &:first-child
-    //   opacity: 1
-
-    // &:hover
-    //   opacity: 1
 
   h3
     font-size: 3rem
@@ -171,12 +165,22 @@ img.word-mark
     margin-top: 10px
     margin-left: 100px
 
-    opacity: .7
-
     line-height: 2
+
+    span
+      display: block
+
+      transform: translateY(20%)
+
+      opacity: 0
+
+  h1 div
+    overflow: hidden
 
   h1 span
     display: block
+
+    transform: translateY(100%)
 
   h1 span:nth-child(2)
     margin: 26px 0

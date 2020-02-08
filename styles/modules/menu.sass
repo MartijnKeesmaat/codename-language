@@ -1,0 +1,73 @@
+nav
+  position: absolute
+  z-index: 1
+  top: 47px
+  left: 32px
+
+  button
+    transition: .3s all ease
+
+    color: #fff
+    border: none
+    background: none
+    text-shadow: 0 2px 12px 0 rgba(#fff, .2)
+
+    font-family: $font-header
+    font-size: 20px
+
+    &:hover
+      cursor: pointer
+
+      opacity: .8
+
+    &:focus
+      outline: none
+
+.menu-items
+  position: absolute
+  z-index: 1
+  top: 0
+  top: 50%
+
+  display: flex
+  visibility: hidden
+  flex-wrap: wrap
+  justify-content: center
+
+  width: 50vw
+  margin-left: 42%
+  padding-top: 50px
+
+  transform: translateY(-50%)
+
+  .menu-item
+    width: 45%
+    margin-bottom: 60px
+
+    cursor: pointer
+    transition: .3s all ease
+
+    opacity: 0
+
+    &:hover
+      opacity: 1 !important
+
+  h3
+    font-size: 3rem
+
+  .menu-body
+    max-width: 250px
+
+    opacity: .7
+
+    font-style: italic
+
+.menu-active
+  .shadow-eyes
+    opacity: 1
+
+  img.header-face
+    filter: blur(20px)
+
+  img.header-words
+    opacity: 1

@@ -1,5 +1,5 @@
 const reveal = gsap.timeline();
-const loader = false;
+const loader = true;
 
 if (loader) {
   reveal.to('.loader', {

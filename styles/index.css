@@ -255,7 +255,7 @@ img.word-mark {
   margin: 26px 0;
   margin-left: 40px;
 }
-.header-text h1 span:nth-child(3) {
+.header-text h1 div:nth-child(3) {
   margin-left: 80px;
 }
 
